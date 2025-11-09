@@ -13,8 +13,22 @@ cd "$SCRIPT_DIR"
 # Create a PID file directory
 mkdir -p .pids
 
-# Function to start an app
-start_app() {
+# Function to start an MFE in preview mode (serves built files)
+start_mfe() {
+    local app_name=$1
+    local app_port=$2
+
+    echo "Starting $app_name on port $app_port..."
+    cd "apps/$app_name"
+    pnpm run preview > "../../.pids/${app_name}.log" 2>&1 &
+    local pid=$!
+    echo $pid > "../../.pids/${app_name}.pid"
+    cd "$SCRIPT_DIR"
+    echo "  ✓ $app_name started (PID: $pid)"
+}
+
+# Function to start shell in dev mode (HMR)
+start_shell() {
     local app_name=$1
     local app_port=$2
 
@@ -28,12 +42,12 @@ start_app() {
 }
 
 # Start all MFEs first (they need to be running before shell)
-echo "📦 Starting Micro Frontends..."
-start_app "dashboard" 4201
-start_app "invoicing" 4202
-start_app "expenses" 4203
-start_app "reports" 4204
-start_app "clients" 4205
+echo "📦 Starting Micro Frontends (preview mode - serving built files)..."
+start_mfe "dashboard" 4201
+start_mfe "invoicing" 4202
+start_mfe "expenses" 4203
+start_mfe "reports" 4204
+start_mfe "clients" 4205
 
 echo ""
 echo "⏳ Waiting 5 seconds for MFEs to initialize..."
@@ -41,8 +55,8 @@ sleep 5
 
 # Start the shell (host) app
 echo ""
-echo "🏠 Starting Shell (Host) App..."
-start_app "shell" 4200
+echo "🏠 Starting Shell (Host) App (dev mode - HMR enabled)..."
+start_shell "shell" 4200
 
 echo ""
 echo "✅ All services started!"
