@@ -32,7 +32,7 @@ i18n
       escapeValue: false, // React already escapes values
     },
     react: {
-      useSuspense: false, // Disable suspense for now
+      useSuspense: true, // Enable suspense for proper loading
     },
   });
 

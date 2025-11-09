@@ -50,26 +50,35 @@ function Layout({ children }: { children: React.ReactNode }) {
 }
 
 function LoadingFallback() {
-  const { t } = useTranslation();
-  return <div className="text-center py-10">{t('common.loading')}</div>;
+  return <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+    <div className="text-gray-600">Laster...</div>
+  </div>;
+}
+
+function AppContent() {
+  return (
+    <BrowserRouter>
+      <Layout>
+        <Suspense fallback={<div className="text-center py-10">Laster...</div>}>
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/invoices/*" element={<Invoicing />} />
+            <Route path="/expenses/*" element={<Expenses />} />
+            <Route path="/reports/*" element={<Reports />} />
+            <Route path="/clients/*" element={<Clients />} />
+          </Routes>
+        </Suspense>
+      </Layout>
+    </BrowserRouter>
+  );
 }
 
 function App() {
   return (
     <AuthProvider>
-      <BrowserRouter>
-        <Layout>
-          <Suspense fallback={<LoadingFallback />}>
-            <Routes>
-              <Route path="/" element={<Dashboard />} />
-              <Route path="/invoices/*" element={<Invoicing />} />
-              <Route path="/expenses/*" element={<Expenses />} />
-              <Route path="/reports/*" element={<Reports />} />
-              <Route path="/clients/*" element={<Clients />} />
-            </Routes>
-          </Suspense>
-        </Layout>
-      </BrowserRouter>
+      <Suspense fallback={<LoadingFallback />}>
+        <AppContent />
+      </Suspense>
     </AuthProvider>
   );
 }
