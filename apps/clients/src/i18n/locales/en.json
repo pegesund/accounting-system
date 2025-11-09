@@ -1,0 +1,7 @@
+{
+  "clients": {
+    "title": "Clients",
+    "addClient": "Add New Client",
+    "description": "Manage your clients."
+  }
+}

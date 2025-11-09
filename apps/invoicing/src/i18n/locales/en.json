@@ -1,0 +1,7 @@
+{
+  "invoicing": {
+    "title": "Invoices",
+    "createInvoice": "Create New Invoice",
+    "description": "Manage your invoices here."
+  }
+}

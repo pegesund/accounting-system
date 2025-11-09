@@ -1,6 +1,8 @@
 import { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { AuthProvider } from './contexts/AuthContext';
+import { LanguageSwitcher } from './components/LanguageSwitcher';
 
 const Dashboard = lazy(() => import('dashboard/Module'));
 const Invoicing = lazy(() => import('invoicing/Module'));
@@ -9,6 +11,8 @@ const Reports = lazy(() => import('reports/Module'));
 const Clients = lazy(() => import('clients/Module'));
 
 function Layout({ children }: { children: React.ReactNode }) {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen bg-gray-100">
       <nav className="bg-white shadow-lg">
@@ -16,23 +20,24 @@ function Layout({ children }: { children: React.ReactNode }) {
           <div className="flex justify-between h-16">
             <div className="flex space-x-8">
               <Link to="/" className="flex items-center px-2 text-gray-700 hover:text-blue-600">
-                Dashboard
+                {t('nav.dashboard')}
               </Link>
               <Link to="/invoices" className="flex items-center px-2 text-gray-700 hover:text-blue-600">
-                Invoices
+                {t('nav.invoices')}
               </Link>
               <Link to="/expenses" className="flex items-center px-2 text-gray-700 hover:text-blue-600">
-                Expenses
+                {t('nav.expenses')}
               </Link>
               <Link to="/reports" className="flex items-center px-2 text-gray-700 hover:text-blue-600">
-                Reports
+                {t('nav.reports')}
               </Link>
               <Link to="/clients" className="flex items-center px-2 text-gray-700 hover:text-blue-600">
-                Clients
+                {t('nav.clients')}
               </Link>
             </div>
-            <div className="flex items-center">
-              <span className="text-gray-700">Demo User</span>
+            <div className="flex items-center space-x-4">
+              <LanguageSwitcher />
+              <span className="text-gray-700">{t('nav.demoUser')}</span>
             </div>
           </div>
         </div>
@@ -44,12 +49,17 @@ function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
+function LoadingFallback() {
+  const { t } = useTranslation();
+  return <div className="text-center py-10">{t('common.loading')}</div>;
+}
+
 function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
         <Layout>
-          <Suspense fallback={<div className="text-center py-10">Loading...</div>}>
+          <Suspense fallback={<LoadingFallback />}>
             <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="/invoices/*" element={<Invoicing />} />

@@ -1,0 +1,7 @@
+{
+  "clients": {
+    "title": "Kunder",
+    "addClient": "Legg til Ny Kunde",
+    "description": "Administrer dine kunder."
+  }
+}

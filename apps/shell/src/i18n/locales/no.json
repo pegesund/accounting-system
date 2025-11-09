@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "dashboard": "Dashbord",
+    "invoices": "Fakturaer",
+    "expenses": "Utgifter",
+    "reports": "Rapporter",
+    "clients": "Kunder",
+    "demoUser": "Demo Bruker"
+  },
+  "common": {
+    "loading": "Laster...",
+    "error": "Feil",
+    "save": "Lagre",
+    "cancel": "Avbryt",
+    "delete": "Slett",
+    "edit": "Rediger",
+    "add": "Legg til",
+    "search": "Søk",
+    "filter": "Filter",
+    "export": "Eksporter",
+    "import": "Importer",
+    "settings": "Innstillinger",
+    "logout": "Logg ut",
+    "login": "Logg inn",
+    "language": "Språk"
+  },
+  "languages": {
+    "no": "Norsk",
+    "en": "Engelsk"
+  }
+}

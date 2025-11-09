@@ -65,15 +65,22 @@ if [ -d ".pids" ]; then
     echo "  ✓ Log files removed"
 fi
 
-# Also kill any stray Vite processes on our ports
+# Also kill any stray Node/Vite processes on our ports (but not browsers)
 echo ""
-echo "🔍 Checking for stray processes..."
+echo "🔍 Checking for stray Node processes..."
 for port in 4200 4201 4202 4203 4204 4205; do
-    pid=$(lsof -ti:$port 2>/dev/null)
-    if [ ! -z "$pid" ]; then
-        echo "  Found process on port $port (PID: $pid), killing..."
-        kill -9 $pid 2>/dev/null
-        echo "  ✓ Process on port $port killed"
+    # Only kill node processes, not browsers
+    pids=$(lsof -ti:$port 2>/dev/null)
+    if [ ! -z "$pids" ]; then
+        for pid in $pids; do
+            # Check if it's a node process
+            proc_name=$(ps -p $pid -o comm= 2>/dev/null)
+            if [[ "$proc_name" == "node" ]] || [[ "$proc_name" == *"vite"* ]] || [[ "$proc_name" == *"pnpm"* ]]; then
+                echo "  Found $proc_name process on port $port (PID: $pid), killing..."
+                kill -9 $pid 2>/dev/null
+                echo "  ✓ Process on port $port killed"
+            fi
+        done
     fi
 done
 

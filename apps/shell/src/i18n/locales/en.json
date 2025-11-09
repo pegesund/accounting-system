@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "invoices": "Invoices",
+    "expenses": "Expenses",
+    "reports": "Reports",
+    "clients": "Clients",
+    "demoUser": "Demo User"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "search": "Search",
+    "filter": "Filter",
+    "export": "Export",
+    "import": "Import",
+    "settings": "Settings",
+    "logout": "Logout",
+    "login": "Login",
+    "language": "Language"
+  },
+  "languages": {
+    "no": "Norwegian",
+    "en": "English"
+  }
+}

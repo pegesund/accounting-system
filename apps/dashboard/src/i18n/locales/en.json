@@ -1,0 +1,10 @@
+{
+  "dashboard": {
+    "title": "Dashboard",
+    "totalRevenue": "Total Revenue",
+    "pendingInvoices": "Pending Invoices",
+    "activeClients": "Active Clients",
+    "recentActivity": "Recent Activity",
+    "recentActivityDescription": "Your recent transactions and updates will appear here."
+  }
+}

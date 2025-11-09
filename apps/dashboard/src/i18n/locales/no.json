@@ -1,0 +1,10 @@
+{
+  "dashboard": {
+    "title": "Dashbord",
+    "totalRevenue": "Total Inntekt",
+    "pendingInvoices": "Ventende Fakturaer",
+    "activeClients": "Aktive Kunder",
+    "recentActivity": "Nylig Aktivitet",
+    "recentActivityDescription": "Dine nylige transaksjoner og oppdateringer vil vises her."
+  }
+}

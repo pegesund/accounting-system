@@ -1,0 +1,7 @@
+{
+  "invoicing": {
+    "title": "Fakturaer",
+    "createInvoice": "Opprett Ny Faktura",
+    "description": "Administrer dine fakturaer her."
+  }
+}
