@@ -12,7 +12,25 @@ export default defineConfig({
       exposes: {
         './Module': './src/App.tsx',
       },
-      shared: ['react', 'react-dom', 'react-router-dom']
+      shared: {
+        react: {
+          singleton: true,
+          requiredVersion: '^19.1.1',
+        },
+        'react-dom': {
+          singleton: true,
+          requiredVersion: '^19.1.1',
+        },
+        'react-router-dom': {
+          singleton: true,
+        },
+        'react-i18next': {
+          singleton: true,
+        },
+        'i18next': {
+          singleton: true,
+        },
+      } as any
     })
   ],
   server: {

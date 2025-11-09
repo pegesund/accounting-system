@@ -15,7 +15,25 @@ export default defineConfig({
         reports: 'http://localhost:4204/assets/remoteEntry.js',
         clients: 'http://localhost:4205/assets/remoteEntry.js',
       },
-      shared: ['react', 'react-dom', 'react-router-dom']
+      shared: {
+        react: {
+          singleton: true,
+          requiredVersion: '^19.1.1',
+        },
+        'react-dom': {
+          singleton: true,
+          requiredVersion: '^19.1.1',
+        },
+        'react-router-dom': {
+          singleton: true,
+        },
+        'react-i18next': {
+          singleton: true,
+        },
+        'i18next': {
+          singleton: true,
+        },
+      } as any
     })
   ],
   server: {
