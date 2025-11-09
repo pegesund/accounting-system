@@ -29,19 +29,26 @@ const resources = {
   },
 };
 
-i18n
-  .use(initReactI18next)
-  .init({
-    resources,
-    fallbackLng: 'no',
-    lng: getLanguage(),
-    interpolation: {
-      escapeValue: false,
-    },
-    react: {
-      useSuspense: false,
-    },
-  });
+// Don't reinitialize if already initialized (shell has already done it)
+if (!i18n.isInitialized) {
+  i18n
+    .use(initReactI18next)
+    .init({
+      resources,
+      fallbackLng: 'no',
+      lng: getLanguage(),
+      interpolation: {
+        escapeValue: false,
+      },
+      react: {
+        useSuspense: false,
+      },
+    });
+} else {
+  // Just add our translations to the existing i18n instance
+  i18n.addResourceBundle('no', 'translation', resources.no.translation, true, true);
+  i18n.addResourceBundle('en', 'translation', resources.en.translation, true, true);
+}
 
 // Listen for language changes from parent window
 window.addEventListener('storage', (e) => {

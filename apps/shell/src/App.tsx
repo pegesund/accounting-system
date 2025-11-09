@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { AuthProvider } from './contexts/AuthContext';
 import { LanguageSwitcher } from './components/LanguageSwitcher';
+import './i18n/config';
 
 const Dashboard = lazy(() => import('dashboard/Module'));
 const Invoicing = lazy(() => import('invoicing/Module'));
