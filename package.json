@@ -1,6 +1,7 @@
 {
   "name": "accounting-system",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -12,10 +13,11 @@
   "packageManager": "pnpm@10.20.0",
   "dependencies": {
     "@originjs/vite-plugin-federation": "^1.4.1",
-    "@tailwindcss/postcss": "^4.1.17",
+    "react-router-dom": "^7.9.5"
+  },
+  "devDependencies": {
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.6",
-    "react-router-dom": "^7.9.5",
-    "tailwindcss": "^4.1.17"
+    "tailwindcss": "^3.4.18"
   }
 }
