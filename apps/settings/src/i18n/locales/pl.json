@@ -1,0 +1,79 @@
+{
+  "app": {
+    "title": "Zarządzanie ustawieniami"
+  },
+  "tabs": {
+    "departments": "Działy",
+    "projects": "Projekty"
+  },
+  "common": {
+    "loading": "Ładowanie...",
+    "saving": "Zapisywanie...",
+    "save": "Zapisz",
+    "cancel": "Anuluj",
+    "edit": "Edytuj",
+    "delete": "Usuń",
+    "actions": "Działania",
+    "active": "Aktywny",
+    "inactive": "Nieaktywny"
+  },
+  "departments": {
+    "title": "Działy",
+    "addNew": "Dodaj dział",
+    "create": "Utwórz dział",
+    "edit": "Edytuj dział",
+    "confirmDelete": "Czy na pewno chcesz usunąć ten dział?",
+    "noData": "Nie znaleziono działów",
+    "fields": {
+      "code": "Kod",
+      "name": "Nazwa",
+      "description": "Opis",
+      "active": "Aktywny"
+    },
+    "validation": {
+      "codeRequired": "Kod jest wymagany",
+      "nameRequired": "Nazwa jest wymagana"
+    },
+    "error": {
+      "load": "Nie udało się załadować działów",
+      "save": "Nie udało się zapisać działu",
+      "delete": "Nie udało się usunąć działu"
+    }
+  },
+  "projects": {
+    "title": "Projekty",
+    "addNew": "Dodaj projekt",
+    "create": "Utwórz projekt",
+    "edit": "Edytuj projekt",
+    "confirmDelete": "Czy na pewno chcesz usunąć ten projekt?",
+    "noData": "Nie znaleziono projektów",
+    "fields": {
+      "code": "Kod",
+      "name": "Nazwa",
+      "description": "Opis",
+      "startDate": "Data rozpoczęcia",
+      "endDate": "Data zakończenia",
+      "dates": "Daty",
+      "status": "Status",
+      "active": "Aktywny"
+    },
+    "status": {
+      "ACTIVE": "Aktywny",
+      "COMPLETED": "Zakończony",
+      "ON_HOLD": "Wstrzymany",
+      "CANCELLED": "Anulowany"
+    },
+    "validation": {
+      "codeRequired": "Kod jest wymagany",
+      "nameRequired": "Nazwa jest wymagana",
+      "startDateRequired": "Data rozpoczęcia jest wymagana",
+      "endDateRequired": "Data zakończenia jest wymagana",
+      "endDateAfterStart": "Data zakończenia musi być po dacie rozpoczęcia"
+    },
+    "error": {
+      "load": "Nie udało się załadować projektów",
+      "save": "Nie udało się zapisać projektu",
+      "delete": "Nie udało się usunąć projektu"
+    }
+  }
+}

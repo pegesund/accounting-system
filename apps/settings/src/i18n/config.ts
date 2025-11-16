@@ -2,6 +2,8 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import translationsNO from './locales/no.json';
 import translationsEN from './locales/en.json';
+import translationsPL from './locales/pl.json';
+import translationsUK from './locales/uk.json';
 
 // Get language from parent (shell) if available, otherwise default to Norwegian
 const getLanguage = () => {
@@ -27,6 +29,12 @@ const resources = {
   en: {
     translation: translationsEN,
   },
+  pl: {
+    translation: translationsPL,
+  },
+  uk: {
+    translation: translationsUK,
+  },
 };
 
 // Don't reinitialize if already initialized (shell has already done it)
@@ -48,6 +56,8 @@ if (!i18n.isInitialized) {
   // Just add our translations to the existing i18n instance
   i18n.addResourceBundle('no', 'translation', resources.no.translation, true, true);
   i18n.addResourceBundle('en', 'translation', resources.en.translation, true, true);
+  i18n.addResourceBundle('pl', 'translation', resources.pl.translation, true, true);
+  i18n.addResourceBundle('uk', 'translation', resources.uk.translation, true, true);
 }
 
 // Listen for language changes from parent window

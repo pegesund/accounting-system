@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import DepartmentList from './components/DepartmentList';
 import ProjectList from './components/ProjectList';
@@ -9,6 +9,21 @@ type Tab = 'departments' | 'projects';
 function App() {
   const { t, i18n } = useTranslation();
   const [activeTab, setActiveTab] = useState<Tab>('departments');
+
+  useEffect(() => {
+    // Listen for language changes from localStorage
+    const handleLanguageChange = () => {
+      const newLang = localStorage.getItem('i18nextLng');
+      if (newLang && i18n.language !== newLang) {
+        i18n.changeLanguage(newLang);
+      }
+    };
+
+    // Poll localStorage every 500ms to detect language changes
+    const interval = setInterval(handleLanguageChange, 500);
+
+    return () => clearInterval(interval);
+  }, [i18n]);
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
