@@ -227,6 +227,13 @@ const resources = {
         settings: "Ustawienia",
         demoUser: "Użytkownik Demo"
       },
+      app: {
+        title: "Zarządzanie ustawieniami"
+      },
+      tabs: {
+        departments: "Działy",
+        projects: "Projekty"
+      },
       common: {
         loading: "Ładowanie...",
         error: "Błąd",
@@ -242,7 +249,70 @@ const resources = {
         settings: "Ustawienia",
         logout: "Wyloguj",
         login: "Zaloguj",
-        language: "Język"
+        language: "Język",
+        saving: "Zapisywanie...",
+        actions: "Akcje",
+        active: "Aktywny",
+        inactive: "Nieaktywny"
+      },
+      departments: {
+        title: "Działy",
+        addNew: "Dodaj dział",
+        create: "Utwórz dział",
+        edit: "Edytuj dział",
+        confirmDelete: "Czy na pewno chcesz usunąć ten dział?",
+        noData: "Nie znaleziono działów",
+        fields: {
+          code: "Kod",
+          name: "Nazwa",
+          description: "Opis",
+          active: "Aktywny"
+        },
+        validation: {
+          codeRequired: "Kod jest wymagany",
+          nameRequired: "Nazwa jest wymagana"
+        },
+        error: {
+          load: "Nie udało się załadować działów",
+          save: "Nie udało się zapisać działu",
+          delete: "Nie udało się usunąć działu"
+        }
+      },
+      projects: {
+        title: "Projekty",
+        addNew: "Dodaj projekt",
+        create: "Utwórz projekt",
+        edit: "Edytuj projekt",
+        confirmDelete: "Czy na pewno chcesz usunąć ten projekt?",
+        noData: "Nie znaleziono projektów",
+        fields: {
+          code: "Kod",
+          name: "Nazwa",
+          description: "Opis",
+          startDate: "Data rozpoczęcia",
+          endDate: "Data zakończenia",
+          dates: "Daty",
+          status: "Status",
+          active: "Aktywny"
+        },
+        status: {
+          ACTIVE: "Aktywny",
+          COMPLETED: "Zakończony",
+          ON_HOLD: "Wstrzymany",
+          CANCELLED: "Anulowany"
+        },
+        validation: {
+          codeRequired: "Kod jest wymagany",
+          nameRequired: "Nazwa jest wymagana",
+          startDateRequired: "Data rozpoczęcia jest wymagana",
+          endDateRequired: "Data zakończenia jest wymagana",
+          endDateAfterStart: "Data zakończenia musi być po dacie rozpoczęcia"
+        },
+        error: {
+          load: "Nie udało się załadować projektów",
+          save: "Nie udało się zapisać projektu",
+          delete: "Nie udało się usunąć projektu"
+        }
       },
       languages: {
         no: "Norweski",
@@ -263,6 +333,13 @@ const resources = {
         settings: "Налаштування",
         demoUser: "Демо Користувач"
       },
+      app: {
+        title: "Управління налаштуваннями"
+      },
+      tabs: {
+        departments: "Відділи",
+        projects: "Проєкти"
+      },
       common: {
         loading: "Завантаження...",
         error: "Помилка",
@@ -278,7 +355,70 @@ const resources = {
         settings: "Налаштування",
         logout: "Вийти",
         login: "Увійти",
-        language: "Мова"
+        language: "Мова",
+        saving: "Збереження...",
+        actions: "Дії",
+        active: "Активний",
+        inactive: "Неактивний"
+      },
+      departments: {
+        title: "Відділи",
+        addNew: "Додати відділ",
+        create: "Створити відділ",
+        edit: "Редагувати відділ",
+        confirmDelete: "Ви впевнені, що хочете видалити цей відділ?",
+        noData: "Відділи не знайдено",
+        fields: {
+          code: "Код",
+          name: "Назва",
+          description: "Опис",
+          active: "Активний"
+        },
+        validation: {
+          codeRequired: "Код є обов'язковим",
+          nameRequired: "Назва є обов'язковою"
+        },
+        error: {
+          load: "Не вдалося завантажити відділи",
+          save: "Не вдалося зберегти відділ",
+          delete: "Не вдалося видалити відділ"
+        }
+      },
+      projects: {
+        title: "Проєкти",
+        addNew: "Додати проєкт",
+        create: "Створити проєкт",
+        edit: "Редагувати проєкт",
+        confirmDelete: "Ви впевнені, що хочете видалити цей проєкт?",
+        noData: "Проєкти не знайдено",
+        fields: {
+          code: "Код",
+          name: "Назва",
+          description: "Опис",
+          startDate: "Дата початку",
+          endDate: "Дата завершення",
+          dates: "Дати",
+          status: "Статус",
+          active: "Активний"
+        },
+        status: {
+          ACTIVE: "Активний",
+          COMPLETED: "Завершено",
+          ON_HOLD: "Призупинено",
+          CANCELLED: "Скасовано"
+        },
+        validation: {
+          codeRequired: "Код є обов'язковим",
+          nameRequired: "Назва є обов'язковою",
+          startDateRequired: "Дата початку є обов'язковою",
+          endDateRequired: "Дата завершення є обов'язковою",
+          endDateAfterStart: "Дата завершення повинна бути після дати початку"
+        },
+        error: {
+          load: "Не вдалося завантажити проєкти",
+          save: "Не вдалося зберегти проєкт",
+          delete: "Не вдалося видалити проєкт"
+        }
       },
       languages: {
         no: "Норвезька",
