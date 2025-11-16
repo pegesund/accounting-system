@@ -22,3 +22,8 @@ declare module 'clients/Module' {
   const Module: React.ComponentType;
   export default Module;
 }
+
+declare module 'settings/Module' {
+  const Module: React.ComponentType;
+  export default Module;
+}

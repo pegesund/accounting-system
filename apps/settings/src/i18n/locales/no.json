@@ -1,0 +1,79 @@
+{
+  "app": {
+    "title": "Innstillinger"
+  },
+  "tabs": {
+    "departments": "Avdelinger",
+    "projects": "Prosjekter"
+  },
+  "common": {
+    "loading": "Laster...",
+    "saving": "Lagrer...",
+    "save": "Lagre",
+    "cancel": "Avbryt",
+    "edit": "Rediger",
+    "delete": "Slett",
+    "actions": "Handlinger",
+    "active": "Aktiv",
+    "inactive": "Inaktiv"
+  },
+  "departments": {
+    "title": "Avdelinger",
+    "addNew": "Legg til avdeling",
+    "create": "Opprett avdeling",
+    "edit": "Rediger avdeling",
+    "confirmDelete": "Er du sikker på at du vil slette denne avdelingen?",
+    "noData": "Ingen avdelinger funnet",
+    "fields": {
+      "code": "Kode",
+      "name": "Navn",
+      "description": "Beskrivelse",
+      "active": "Aktiv"
+    },
+    "validation": {
+      "codeRequired": "Kode er påkrevd",
+      "nameRequired": "Navn er påkrevd"
+    },
+    "error": {
+      "load": "Kunne ikke laste avdelinger",
+      "save": "Kunne ikke lagre avdeling",
+      "delete": "Kunne ikke slette avdeling"
+    }
+  },
+  "projects": {
+    "title": "Prosjekter",
+    "addNew": "Legg til prosjekt",
+    "create": "Opprett prosjekt",
+    "edit": "Rediger prosjekt",
+    "confirmDelete": "Er du sikker på at du vil slette dette prosjektet?",
+    "noData": "Ingen prosjekter funnet",
+    "fields": {
+      "code": "Kode",
+      "name": "Navn",
+      "description": "Beskrivelse",
+      "startDate": "Startdato",
+      "endDate": "Sluttdato",
+      "dates": "Datoer",
+      "status": "Status",
+      "active": "Aktiv"
+    },
+    "status": {
+      "ACTIVE": "Aktiv",
+      "COMPLETED": "Fullført",
+      "ON_HOLD": "På vent",
+      "CANCELLED": "Kansellert"
+    },
+    "validation": {
+      "codeRequired": "Kode er påkrevd",
+      "nameRequired": "Navn er påkrevd",
+      "startDateRequired": "Startdato er påkrevd",
+      "endDateRequired": "Sluttdato er påkrevd",
+      "endDateAfterStart": "Sluttdato må være etter startdato"
+    },
+    "error": {
+      "load": "Kunne ikke laste prosjekter",
+      "save": "Kunne ikke lagre prosjekt",
+      "delete": "Kunne ikke slette prosjekt"
+    }
+  }
+}

@@ -10,6 +10,7 @@ const Invoicing = lazy(() => import('invoicing/Module'));
 const Expenses = lazy(() => import('expenses/Module'));
 const Reports = lazy(() => import('reports/Module'));
 const Clients = lazy(() => import('clients/Module'));
+const Settings = lazy(() => import('settings/Module'));
 
 function Layout({ children }: { children: React.ReactNode }) {
   const { t } = useTranslation();
@@ -34,6 +35,9 @@ function Layout({ children }: { children: React.ReactNode }) {
               </Link>
               <Link to="/clients" className="flex items-center px-2 text-gray-700 hover:text-blue-600">
                 {t('nav.clients')}
+              </Link>
+              <Link to="/settings" className="flex items-center px-2 text-gray-700 hover:text-blue-600">
+                {t('nav.settings')}
               </Link>
             </div>
             <div className="flex items-center space-x-4">
@@ -64,6 +68,7 @@ function App() {
               <Route path="/expenses/*" element={<Expenses />} />
               <Route path="/reports/*" element={<Reports />} />
               <Route path="/clients/*" element={<Clients />} />
+              <Route path="/settings/*" element={<Settings />} />
             </Routes>
           </Suspense>
         </Layout>

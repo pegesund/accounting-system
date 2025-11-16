@@ -1,0 +1,79 @@
+{
+  "app": {
+    "title": "Settings Management"
+  },
+  "tabs": {
+    "departments": "Departments",
+    "projects": "Projects"
+  },
+  "common": {
+    "loading": "Loading...",
+    "saving": "Saving...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "actions": "Actions",
+    "active": "Active",
+    "inactive": "Inactive"
+  },
+  "departments": {
+    "title": "Departments",
+    "addNew": "Add Department",
+    "create": "Create Department",
+    "edit": "Edit Department",
+    "confirmDelete": "Are you sure you want to delete this department?",
+    "noData": "No departments found",
+    "fields": {
+      "code": "Code",
+      "name": "Name",
+      "description": "Description",
+      "active": "Active"
+    },
+    "validation": {
+      "codeRequired": "Code is required",
+      "nameRequired": "Name is required"
+    },
+    "error": {
+      "load": "Failed to load departments",
+      "save": "Failed to save department",
+      "delete": "Failed to delete department"
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "addNew": "Add Project",
+    "create": "Create Project",
+    "edit": "Edit Project",
+    "confirmDelete": "Are you sure you want to delete this project?",
+    "noData": "No projects found",
+    "fields": {
+      "code": "Code",
+      "name": "Name",
+      "description": "Description",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "dates": "Dates",
+      "status": "Status",
+      "active": "Active"
+    },
+    "status": {
+      "ACTIVE": "Active",
+      "COMPLETED": "Completed",
+      "ON_HOLD": "On Hold",
+      "CANCELLED": "Cancelled"
+    },
+    "validation": {
+      "codeRequired": "Code is required",
+      "nameRequired": "Name is required",
+      "startDateRequired": "Start date is required",
+      "endDateRequired": "End date is required",
+      "endDateAfterStart": "End date must be after start date"
+    },
+    "error": {
+      "load": "Failed to load projects",
+      "save": "Failed to save project",
+      "delete": "Failed to delete project"
+    }
+  }
+}

@@ -5,6 +5,7 @@
     "expenses": "Utgifter",
     "reports": "Rapporter",
     "clients": "Kunder",
+    "settings": "Innstillinger",
     "demoUser": "Demo Bruker"
   },
   "common": {
@@ -26,6 +27,8 @@
   },
   "languages": {
     "no": "Norsk",
-    "en": "Engelsk"
+    "en": "Engelsk",
+    "pl": "Polsk",
+    "uk": "Ukrainsk"
   }
 }

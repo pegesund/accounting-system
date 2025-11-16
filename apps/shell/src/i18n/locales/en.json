@@ -5,6 +5,7 @@
     "expenses": "Expenses",
     "reports": "Reports",
     "clients": "Clients",
+    "settings": "Settings",
     "demoUser": "Demo User"
   },
   "common": {
@@ -26,6 +27,8 @@
   },
   "languages": {
     "no": "Norwegian",
-    "en": "English"
+    "en": "English",
+    "pl": "Polish",
+    "uk": "Ukrainian"
   }
 }
