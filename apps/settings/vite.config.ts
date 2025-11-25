@@ -29,7 +29,7 @@ export default defineConfig({
           singleton: true,
         },
       }
-    })
+    }) as any
   ],
   server: {
     port: 4206,
